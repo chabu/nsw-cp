@@ -19,7 +19,6 @@ func main() {
 	}
 	
 	dns.HandleFunc(".", recursor)
-	
 	dns.HandleFunc("nintendo.com.", self)
 	dns.HandleFunc("nintendo.net.", self)
 	dns.HandleFunc("nintendowifi.net.", self)
