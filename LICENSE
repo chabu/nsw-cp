@@ -38,3 +38,5 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 +----------------------+
 Copyright (c) 2011 Miek Gieben
 Copyright (c) 2014 CloudFlare
+
+This software uses the original Go file in part.
