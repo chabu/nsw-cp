@@ -15,7 +15,7 @@ func main() {
 		ipnet := addr.(*net.IPNet)
 		if ipnet.IP.To4() == nil { continue }
 		if ipnet.IP.IsGlobalUnicast() == false { continue }
-		fmt.Println("IP:", ipnet.IP.String())
+		fmt.Println("DNS Server:", ipnet.IP.String())
 	}
 	
 	dns.HandleFunc(".", recursor)
