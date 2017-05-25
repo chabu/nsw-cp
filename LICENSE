@@ -39,4 +39,4 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Copyright (c) 2011 Miek Gieben
 Copyright (c) 2014 CloudFlare
 
- * The above software is using the official Go code partially.
+ * The above software is using the original Go code partially.
