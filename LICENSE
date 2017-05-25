@@ -1,6 +1,6 @@
-+-----------------------------------+
-| Code written by me & contributors |
-+-----------------------------------+
++--------------------+
+| Code written by me |
++--------------------+
 CC0 (Creative Commons Zero v1.0 Universal)
 https://creativecommons.org/publicdomain/zero/1.0/
 
@@ -39,4 +39,4 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Copyright (c) 2011 Miek Gieben
 Copyright (c) 2014 CloudFlare
 
- * This software uses the original Go files in part.
+ * The above software is using the official Go code partially.
