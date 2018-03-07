@@ -1,0 +1,24 @@
+language: go
+
+notifications:
+  email: false
+
+go:
+  - 1.10.x
+
+before_install:
+  - go get github.com/miekg/dns
+
+# Do not make a build harder.
+# For example, parallelizing and symmetric-key encrypting.
+
+deploy:
+  provider: releases
+  api_key:
+    # Use Personal access token per repository.
+    secure: Ng+5kg16Jvf5yN9s/ALl3QBdFEpP7GUfi43UuT1mYRGoN5mdm29g6wFQFFqFyp0pYdpE9ACMH+Z2jPbIhHlmJsdCykbxdaJCDgQWfncL6LBhzsOryaZKQVSh5YFn29x9Cee4g7Hrp27/mx/2zdZfAkzguD+agPDR3qoPU2o/YRF3HHIH60BDNtMd+SV5mdTliuruaXfzdvvKRJNyv5nU/fxJGLW14TJa7uuEv6TrvtvDrRpIseFKGNH885uNXK+cYcRT6RI0ZhCbIq8B0QwqEp++momS4ExpppGrdjseScX+xnrt8lbfE3Qx0pDD6UJyefwSjz+Bcw/HUrBf+R3u6uu2x6Wx9mDTz8IPKLTppPxZC2xuEoVX4Knv9H8/RApTCjrLzckLex4mtFC74nvcODe7sNeuyrQrjiSsyXkJjyotEvf4rfEqXd+IMqcLkM03FJnHUPlWtYcx+qRGQkTaMvSDnokeibZHAMD1HPjzlYwRLKV1ROD8HJcahQvhDFTW4Nwya06hVcUCT6b/f5jNr0oek7P9dvdpOIloyOj9lqclabfboGMopi1CZiqOx0pDuohEIZjqdomDnmWpMVMDPti9CHsq5ZgeuzwmAEFHIpP9Nw1HrS/SfW6q5pal87GtZ5jpptnw4DD8mI8/OTZDfn3uKzlhYGzDHBNEXYIYXDo=
+  file_glob: true
+  file: $TRAVIS_BUILD_DIR/nsw-cp_*
+  skip_cleanup: true
+  on:
+    tags: true
