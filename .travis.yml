@@ -1,3 +1,5 @@
+# This file shows a way of building. That's all.
+
 language: go
 
 notifications:
