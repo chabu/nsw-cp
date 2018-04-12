@@ -2,16 +2,13 @@
 
 language: go
 
-notifications:
-  email: false
-
 go:
   - 1.10.x
 
 before_install:
   - go get github.com/miekg/dns
 
-# Do not make a build harder.
+# Don't complicate a build.
 # For example, parallelizing and symmetric-key encrypting.
 
 deploy:
@@ -24,3 +21,6 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+
+notifications:
+  email: false

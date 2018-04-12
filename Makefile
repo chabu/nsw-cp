@@ -1,4 +1,4 @@
-# Should be compatible with GNU Make, BSD Make, and NMake.
+# should be compatible with GNU Make, BSD Make, and NMake.
 
 NAME = nsw-cp
 GOFLAGS = -ldflags "-s -w"
