@@ -1,6 +1,12 @@
 # nsw-cp [![Build Status](https://travis-ci.org/chabu-jp/nsw-cp.svg?branch=master)](https://travis-ci.org/chabu-jp/nsw-cp)
 Captive Portal for Nintendo Switch
 
+# Usage example
+```
+$ sudo ./nsw-cp
+specify this as DNS server: 192.0.2.1
+```
+
 # LICENSE
 ## Code written by me
 ```
