@@ -15,7 +15,7 @@ func main() {
 		ipnet := addr.(*net.IPNet)
 		if ipnet.IP.To4() == nil { continue }
 		if ipnet.IP.IsGlobalUnicast() == false { continue }
-		fmt.Println("DNS Server:", ipnet.IP.String())
+		fmt.Println("specify this as DNS server:", ipnet.IP.String())
 	}
 	
 	dns.HandleFunc(".", recursor)
@@ -78,13 +78,8 @@ func recursor(writer dns.ResponseWriter, req *dns.Msg) {
 	res.RecursionAvailable = true
 	
 	qname := req.Question[0].Name
-	qtype := req.Question[0].Qtype
 	
-	if qtype != dns.TypeA {
-		res.SetRcode(req, dns.RcodeNotImplemented)
-		writer.WriteMsg(res)
-		return
-	}
+	// I don't care IPv6-only servers
 	
 	addrs, err := net.LookupIP(qname)
 	if err != nil {
@@ -137,8 +132,8 @@ func jumper(res http.ResponseWriter, req *http.Request) {
 <meta name="viewport" content="initial-scale=1">
 </head>
 <body>
-<input type="url" value="http://" style="width: 50%;">
-<input type="submit" onclick="location.href = document.querySelector('input').value;">
+<input type="url" value="https://" style="width: 100%;"><br>
+<input type="submit" onclick="window.location = document.querySelector('input').value;">
 </body>
 </html>
 `))
