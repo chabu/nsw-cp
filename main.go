@@ -29,7 +29,7 @@ func main() {
 
 	http.HandleFunc("/", jumper)
 	go func () {
-		server := &http.Server{Addr: ":80"}
+		server := &http.Server{Addr: ":80"} // I want "Net:"
 		panic(server.ListenAndServe())
 	}()
 
@@ -49,7 +49,6 @@ func self(writer dns.ResponseWriter, req *dns.Msg) {
 	addrs, _ := net.InterfaceAddrs()
 	for _, addr := range addrs {
 		ipnet := addr.(*net.IPNet)
-
 		if ipnet.IP.To4() == nil { continue }
 		if ipnet.IP.IsGlobalUnicast() == false { continue }
 
