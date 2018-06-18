@@ -1,5 +1,4 @@
 # nsw-cp [![Build Status](https://travis-ci.org/chabu/nsw-cp.svg?branch=master)](https://travis-ci.org/chabu/nsw-cp)
-Captive Portal for Nintendo Switch
 
 # Usage example
 ```
