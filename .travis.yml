@@ -3,7 +3,7 @@
 language: go
 
 go:
-  - 1.10.x
+  - 1.11.x
 
 before_install:
   - go get github.com/miekg/dns
@@ -14,7 +14,7 @@ before_install:
 deploy:
   provider: releases
   api_key:
-    # Use Personal access token per repository.
+    # Use personal access token per repository.
     secure: 2qP7J5YFKcxIh2+ii0jzeHna8Tu5bC36bA5mK/1uJY27V5UVzlJoGW2ZcoE4inpsrp/7MDXTCtybUWF59qur8zGwrirkYBJoRcMFQlnI83Rzl2FQAqbQDph85LDvmOMnjSl+YgIua8SmnLKsw3De52x5fqIK8S3HxVWNtasLKXZKUqvOHnmPE7ncIe9mLXXKcDeMg1xrx8Iw2X93dmIsx9Uzot2+rQGPWhSzTa3mSrX+NMo/t0oXVmXYpwrZUmpIWQLEc3MBbmzcz2t3V+zPP9BQY1NDu9lJqpNDxvX/6hqBX9w3wWOuDXkRjTeLgFj0c1Ns7tJmKgvth105dZFgqCIGmVuzpnWMdtHOWDQW6bN1LOQuzuUFUfGK06JtSHEVJ/y6l3Uth1yC62M8Z7po5DVX9VUQMcvQVco+gMLIGIO6xV8oedv1am6FtYwRfOSG65/1Eu5NEWeOqjmYaV/1BKeWqpPL2T9AtWE5PcZ6tbJQPEA5xPPiKttLaWR8RTBEhR1sAje3Ws3PyFm9gIQuJDQ4f5FdK7H2X2t25U8JkRuEwnswCc9Q8RhR6IlQ4g6uu7xmv8RcFpG937ETL7BaIvOUoGkiqN4+k9j3eHepnl70IKffDBUpb4jHdZsSibSMsrFrQAs1OUIeum8n3H60W/+XhiLe6NVDLgnPFSNSWtI=
   file_glob: true
   file: $TRAVIS_BUILD_DIR/nsw-cp_*
